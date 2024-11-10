@@ -19,11 +19,18 @@
         <ul>
             <li><label for="video-tab">Videos</label></li>
             <li><label for="image-tab">Images</label></li>
+            <li><label for="warning-tab">Warning</label></li>
+
         </ul>
     </nav>
 
-    <input type="radio" id="video-tab" name="tab" checked>
-    <input type="radio" id="image-tab" name="tab">
+    <input type="radio" id="video-tab" name="tab" checked hidden>
+    <input type="radio" id="image-tab" name="tab" hidden>
+    <input type="radio" id="warning-tab" name="tab" hidden>
+
+
+
+
 
 
     <section id="videos" class="content-section">
@@ -61,7 +68,7 @@
             </video>
             <p>Dont look </p>
         </div>
-    </div>
+   
 
 
 
@@ -90,6 +97,9 @@
     </section>
 
 
+
+
+
     <section id="images" class="content-section">
         <h2>Images</h2>
         <div class="content">
@@ -108,5 +118,47 @@
         </div>
     </section>
 
+
+
+
+    <section id="warning" class="content-section">
+        <h2>Warning</h2>
+        <div class="content">
+            <button onclick="downloadPart('https://raw.githubusercontent.com/GoldernHaze/XPT/main/videos/VID_20241110_125835.mp4')">Part 1</button>
+            <button onclick="downloadPart('https://raw.githubusercontent.com/GoldernHaze/XPT/main/videos/test.mp4')">Part 2 (available soon)</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+<!--THIS PART IS COPIED FROM CHATGPT--->
+
+
+
+    <!-- JavaScript for Tab Navigation and Downloads -->
+    <script>
+        // Show the corresponding section based on the selected tab
+        document.querySelectorAll('input[name="tab"]').forEach(input => {
+            input.addEventListener('change', function() {
+                document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
+                if (input.id === 'video-tab') document.getElementById('videos').style.display = 'block';
+                if (input.id === 'image-tab') document.getElementById('images').style.display = 'block';
+                if (input.id === 'warning-tab') document.getElementById('warning').style.display = 'block';
+            });
+        });
+
+        // Trigger download for each part
+        function downloadPart(url) {
+            window.location.href = url;
+        }
+
+        // Set default tab to Videos
+        document.getElementById('video-tab').checked = true;
+        document.getElementById('videos').style.display = 'block';
+    </script>
 </body>
 </html>
