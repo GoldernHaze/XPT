@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">XST</div>
+        <input type="text" placeholder="Search... (Unavailable)">
+    </header>
+
+    <!-- Navigation Tabs (Using checkboxes for toggling) -->
+    <nav>
+        <ul>
+            <li><label for="video-tab">Videos</label></li>
+            <li><label for="image-tab">Images</label></li>
+        </ul>
+    </nav>
+
+    <!-- Tab Inputs for toggling -->
+    <input type="radio" id="video-tab" name="tab" checked>
+    <input type="radio" id="image-tab" name="tab">
+
+    <!-- Videos Section -->
+    <section id="videos" class="content-section">
+        <h2>Videos</h2>
+        <div class="content">
+            <!-- Manually add video items -->
+            <div class="video">
+                <video controls>
+                    <source src="videos/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Video 1</p>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="videos/2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Video 2</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Images Section -->
+    <section id="images" class="content-section">
+        <h2>Images</h2>
+        <div class="content">
+            <!-- Manually add image items -->
+            <div class="image">
+                <img src="images/image1.jpg" alt="Image 1">
+                <p>Image 1</p>
+            </div>
+            <div class="image">
+                <img src="images/2.jpeg" alt="Image 2">
+                <p>yo yo yo</p>
+            </div>
+            <div class="image">
+                <img src="images/3.jpeg" alt="Image 2">
+                <p>hi hi hi</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
