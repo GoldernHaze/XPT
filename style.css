@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -101,9 +101,8 @@ img {
         width: 90%;
     }
 
-    /* Properly Hide Radio Buttons */
     input[type="radio"] {
         position: absolute;
-        left: -9999px; /* Move radio buttons far off-screen */
+        left: -9999px; 
     }
 }
