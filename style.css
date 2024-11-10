@@ -60,7 +60,8 @@ nav ul li label:hover {
 }
 
 #video-tab:checked ~ #videos,
-#image-tab:checked ~ #images {
+#image-tab:checked ~ #images,
+#warning-tab:checked ~ #warning {
     display: block;
 }
 
@@ -90,6 +91,22 @@ img {
     width: 100%;
     border-radius: 10px;
 }
+/* below part from chat gpt */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
 
 @media (max-width: 768px) {
     .content {
