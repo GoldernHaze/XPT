@@ -1,6 +1,1 @@
-# XPT
-
-#Testing
-#create for testing purpose 
-#first project ofcourse!!
-#enjoy me!!
+simple video and image streaming web page..
